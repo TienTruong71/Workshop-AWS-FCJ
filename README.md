@@ -1,2 +1,9 @@
-# Workshop-AWS-FCJ
-Database Configuration Management &amp; Infrastructure as Code (IaC)
+## How to run website in local
+
+```
+hugo
+```
+
+```
+hugo server
+```
