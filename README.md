@@ -192,9 +192,9 @@ This project proposal outlines a comprehensive workshop focused on managing clou
 # Appendices
 
 ## A. Technical Specifications
-- Terraform: v1.3+
-- Database: PostgreSQL/MySQL
-- CI/CD: GitHub Actions/GitLab CI/Jenkins
+- Terraform: v1.4+
+- Database: MySQL
+- CI/CD: GitHub Actions
 
 ## B. Cost Calculations
 - See spreadsheet in `/docs/cost-estimation.xlsx`
