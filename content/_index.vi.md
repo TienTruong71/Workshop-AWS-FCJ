@@ -21,10 +21,10 @@ Workshop này được thiết kế nhằm giúp người học làm chủ quy t
 {{% notice note %}}
 🎯 **Kết quả mong đợi:**  
 Học viên sau khi hoàn tất workshop sẽ:
-Hiểu được kiến trúc tổng thể của một hệ thống Database được triển khai theo IaC.
-Biết cách phát triển và tái sử dụng các template IaC cho nhiều hệ CSDL.
-Nắm được cách kiểm soát thay đổi, rollback cấu hình và tích hợp CI/CD cho quá trình triển khai.
-Áp dụng vào hệ thống thực tế với nhiều môi trường (development, staging, production).
+- Hiểu được kiến trúc tổng thể của một hệ thống Database được triển khai theo IaC.
+- Biết cách phát triển và tái sử dụng các template IaC cho nhiều hệ CSDL.
+- Nắm được cách kiểm soát thay đổi, rollback cấu hình và tích hợp CI/CD cho quá trình triển khai.
+- Áp dụng vào hệ thống thực tế với nhiều môi trường (development, staging, production).
 {{% /notice %}}
 
 ![ConnectPrivate](/images/arc-log.png) 
