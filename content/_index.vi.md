@@ -1,5 +1,5 @@
 ---
-title : "Session Management"
+title : "Database Configuration Management & Infrastructure as Code (IaC)"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
@@ -8,14 +8,29 @@ chapter : false
 
 ### Tổng quan
 
-Workshop này nhằm hướng dẫn người học cách triển khai và quản lý hạ tầng cơ sở dữ liệu bằng phương pháp **Infrastructure as Code (IaC)**, kết hợp với **Configuration Management**, đảm bảo:
-- Tự động hóa quá trình tạo, cấu hình và triển khai hệ thống database.
-- Đảm bảo khả năng version hóa, rollback, và kiểm soát thay đổi cấu hình CSDL.
-- Áp dụng được cho nhiều loại hệ quản trị cơ sở dữ liệu như MySQL, PostgreSQL.
-- Thực hành triển khai CI/CD, kiểm tra tuân thủ và dọn dẹp tài nguyên sau khi sử dụng.
+Workshop này được thiết kế nhằm giúp người học làm chủ quy trình triển khai, quản lý và giám sát hạ tầng cơ sở dữ liệu một cách **tự động, chuẩn hóa và có khả năng kiểm soát thay đổi hiệu quả** thông qua các kỹ thuật hiện đại như:
+
+- **Infrastructure as Code (IaC)**: Sử dụng công cụ như Terraform để mô hình hóa toàn bộ hạ tầng (database instance, subnet, security group, v.v.) dưới dạng mã nguồn có thể version hóa, audit và triển khai tự động.
+  
+- **Configuration Management**: Tự động cấu hình và quản lý các tham số hệ thống, script khởi tạo CSDL, cài đặt backup, restore, v.v. thông qua Ansible, Bash, hoặc AWS SSM.
+
+- **Versioning và Change Tracking**: Thiết lập quy trình kiểm soát thay đổi để theo dõi cấu hình hiện tại, rollback khi cần, và duy trì trạng thái hệ thống nhất quán.
+
+- **Tự động hóa triển khai (CI/CD)**: Tích hợp quy trình deploy hạ tầng và cấu hình database vào pipeline CI/CD giúp nhanh chóng đưa môi trường dev/test/prod vào vận hành.
+
+- **Tuân thủ và kiểm soát cấu hình (Compliance Validation)**: Áp dụng quy định bảo mật, mã hóa dữ liệu, xác thực truy cập thông qua công cụ như AWS Config, SSM, hoặc check thủ công qua output Terraform/Ansible.
+
+- **Hỗ trợ đa hệ quản trị**: MySQL và PostgreSQL sẽ là hai ví dụ tiêu biểu để minh họa cách thức áp dụng IaC + Configuration Management cho các hệ quản trị CSDL phổ biến.
+
+- **Quản lý vòng đời tài nguyên**: Sau khi sử dụng xong, hệ thống sẽ được dọn dẹp tự động để tránh phát sinh chi phí và duy trì môi trường sạch sẽ cho lần triển khai tiếp theo.
 
 {{% notice note %}}
-Kết quả mong đợi: Học viên sau workshop có thể tự thiết kế hạ tầng database bằng IaC, quản lý cấu hình database hiệu quả, và áp dụng vào môi trường thực tế (prod/dev/test).
+🎯 **Kết quả mong đợi:**  
+Học viên sau khi hoàn tất workshop sẽ:
+- Hiểu được kiến trúc tổng thể của một hệ thống Database được triển khai theo IaC.
+- Biết cách phát triển và tái sử dụng các template IaC cho nhiều hệ CSDL.
+- Nắm được cách kiểm soát thay đổi, rollback cấu hình và tích hợp CI/CD cho quá trình triển khai.
+- Áp dụng vào hệ thống thực tế với nhiều môi trường (development, staging, production).
 {{% /notice %}}
 
 ![ConnectPrivate](/images/arc-log.png) 
