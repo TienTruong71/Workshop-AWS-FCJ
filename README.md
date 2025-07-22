@@ -131,8 +131,8 @@ Thông qua workshop, học viên sẽ hiểu được cách thiết kế hạ t�
 - Networking & S3: ~10–15$/tháng
 
 ## Chi phí Phát triển
-- Chuẩn bị bài giảng: 300–500$
-- Soạn slide & lab thực hành: 200$
+- Chuẩn bị bài giảng 
+- Soạn slide & lab thực hành
 
 ## Chi phí Vận hành
 - Hosting workshop, tài khoản AWS: ~30$
@@ -193,9 +193,9 @@ Thông qua workshop, học viên sẽ hiểu được cách thiết kế hạ t�
 # Phụ lục
 
 ## A. Thông số Kỹ thuật
-- Terraform >= v1.3
-- Database: PostgreSQL/MySQL
-- CI/CD: GitHub Actions hoặc GitLab CI
+- Terraform >= v1.4
+- Database: MySQL
+- CI/CD: GitHub Actions hoặc GitLab CL
 
 ## B. Tính toán Chi phí
 - Chi tiết trong file `/docs/budget.xlsx`
