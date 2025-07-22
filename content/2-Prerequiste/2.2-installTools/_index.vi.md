@@ -1,5 +1,5 @@
 ---
-title : "Tạo IAM Role"
+title : "Cài đặt các công cụ cần thiết"
 date: 2025-07-22 
 weight : 2 
 chapter : false
