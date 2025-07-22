@@ -27,5 +27,5 @@ Kết quả mong đợi: Học viên sau workshop có thể tự thiết kế h�
  3. [Phát triển hạ tầng IaC cho Database](3-Accessibilitytoinstance/)
  4. [Quản lý cấu hình Database](4-s3log/)
  5. [Triển khai tự động và Rollback](5-Portfwd/)
- 6. [Đảm bảo tuân thủ & kiểm soát thay đổi](6-cleanup/)
- 7. [Dọn dẹp tài nguyên](7-test/)
+ 6. [Đảm bảo tuân thủ & kiểm soát thay đổi](6-Compliance/)
+ 7. [Dọn dẹp tài nguyên](7-Cleanup/)

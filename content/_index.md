@@ -27,5 +27,5 @@ Expected outcomes: After the workshop, students should be able to independently 
  3. [Developing IaC Infractructure for Databases](3-Accessibilitytoinstance/)
  4. [Database Configuration Management](4-s3log/)
  5. [Automated Deployment and Rollback](5-Portfwd/)
- 6. [Compliance & Change Control](6-cleanup/)
- 7. [Clean up resource](7-test/)
+ 6. [Compliance & Change Control](6-Compliance/)
+ 7. [Clean up resource](7-Cleanup/)
