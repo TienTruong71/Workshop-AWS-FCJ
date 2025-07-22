@@ -3,7 +3,7 @@ title : "Đảm bảo tuân thủ và kiểm soát thay đổi"
 date :  "`r Sys.Date()`" 
 weight : 6
 chapter : false
-pre : " <b> 7. </b> "
+pre : " <b> 6. </b> "
 ---
 
 Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.
