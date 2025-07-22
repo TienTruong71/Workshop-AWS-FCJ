@@ -20,16 +20,14 @@ This workshop is designed to help learners master the process of deploying, mana
 
 {{% notice note %}}
 🎯 **Expected Outcomes:**  
-By the end of this workshop, learners will:
-- Understand the end-to-end architecture of a database system deployed via IaC.
-- Learn how to develop and reuse IaC templates for different types of databases.
-- Gain practical experience in change control, rollback mechanisms, and CI/CD integration.
-- Be able to apply these practices in real-world environments including development, staging, and production.
+By the end of this workshop, learners will understand the end-to-end architecture of a database system deployed via IaC. Learn how to develop and reuse IaC templates for different types of databases. Gain practical experience in change control, rollback mechanisms, and CI/CD integration. Be able to apply these practices in real-world environments including development, staging, and production.
 {{% /notice %}}
 
 ![ConnectPrivate](/images/arc-log.png) 
 
-### Nội dung
+Below is an overview diagram of **database configuration management** and **infrastructure as code (IaC)** using the **Terraform** tool for modeling. You can refer to it.
+
+### Content
 
  1. [Introduction](1-introduce/)
  2. [Preparation](2-Prerequiste/)
