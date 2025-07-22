@@ -1,7 +1,7 @@
 ---
 title : "Thử Nghiệm"
 date :  "`r Sys.Date()`" 
-weight : 3 
+weight : 7
 chapter : false
 pre : " <b> 7. </b> "
 ---
