@@ -11,17 +11,11 @@ chapter : false
 This workshop is designed to help learners master the process of deploying, managing, and monitoring database infrastructure in a **fully automated, standardized, and change-controlled** manner using modern techniques such as:
 
 - **Infrastructure as Code (IaC)**: Leverage tools like **Terraform** to model the entire infrastructure (database instances, subnets, security groups, etc.) as version-controlled and auditable source code that can be deployed automatically.
-
 - **Configuration Management**: Automate configuration and management of system parameters, database initialization scripts, backup and restore settings, etc., using tools like **Ansible**, **Bash**, or **AWS Systems Manager (SSM)**.
-
 - **Versioning and Change Tracking**: Establish change management workflows to track current configurations, perform rollbacks when necessary, and maintain a consistent system state.
-
 - **CI/CD-based Deployment Automation**: Integrate infrastructure provisioning and database configuration into **CI/CD pipelines** to quickly launch dev/test/prod environments with minimal manual intervention.
-
 - **Compliance and Configuration Validation**: Enforce security policies, data encryption, and access authentication using tools such as **AWS Config**, **SSM**, or manual checks via Terraform/Ansible outputs.
-
 - **Multi-Engine Support**: The workshop demonstrates applying **IaC and Configuration Management** to popular database engines such as **MySQL** and **PostgreSQL**.
-
 - **Resource Lifecycle Management**: After usage, the environment is automatically cleaned up to prevent unexpected costs and ensure a fresh setup for future deployments.
 
 {{% notice note %}}

@@ -11,17 +11,11 @@ chapter : false
 Workshop này được thiết kế nhằm giúp người học làm chủ quy trình triển khai, quản lý và giám sát hạ tầng cơ sở dữ liệu một cách **tự động, chuẩn hóa và có khả năng kiểm soát thay đổi hiệu quả** thông qua các kỹ thuật hiện đại như:
 
 - **Infrastructure as Code (IaC)**: Sử dụng công cụ như Terraform để mô hình hóa toàn bộ hạ tầng (database instance, subnet, security group, v.v.) dưới dạng mã nguồn có thể version hóa, audit và triển khai tự động.
-  
 - **Configuration Management**: Tự động cấu hình và quản lý các tham số hệ thống, script khởi tạo CSDL, cài đặt backup, restore, v.v. thông qua Ansible, Bash, hoặc AWS SSM.
-
 - **Versioning và Change Tracking**: Thiết lập quy trình kiểm soát thay đổi để theo dõi cấu hình hiện tại, rollback khi cần, và duy trì trạng thái hệ thống nhất quán.
-
 - **Tự động hóa triển khai (CI/CD)**: Tích hợp quy trình deploy hạ tầng và cấu hình database vào pipeline CI/CD giúp nhanh chóng đưa môi trường dev/test/prod vào vận hành.
-
 - **Tuân thủ và kiểm soát cấu hình (Compliance Validation)**: Áp dụng quy định bảo mật, mã hóa dữ liệu, xác thực truy cập thông qua công cụ như AWS Config, SSM, hoặc check thủ công qua output Terraform/Ansible.
-
 - **Hỗ trợ đa hệ quản trị**: MySQL và PostgreSQL sẽ là hai ví dụ tiêu biểu để minh họa cách thức áp dụng IaC + Configuration Management cho các hệ quản trị CSDL phổ biến.
-
 - **Quản lý vòng đời tài nguyên**: Sau khi sử dụng xong, hệ thống sẽ được dọn dẹp tự động để tránh phát sinh chi phí và duy trì môi trường sạch sẽ cho lần triển khai tiếp theo.
 
 {{% notice note %}}
