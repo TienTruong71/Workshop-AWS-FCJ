@@ -3,208 +3,208 @@
 
 ---
 
-# Executive Summary
-This project proposal outlines a comprehensive workshop focused on managing cloud infrastructure and database configurations using Infrastructure as Code (IaC) principles. It demonstrates how to automate the provisioning of AWS infrastructure and manage database schema versions consistently across multiple environments using tools like Terraform and Liquibase/Flyway. The workshop aims to bridge gaps between DevOps and database operations, ensuring faster deployments, increased reliability, and a standardized approach to configuration management.
+# Tóm tắt Dự án
+
+Tài liệu này trình bày đề xuất chi tiết cho một workshop chuyên sâu về **quản lý cấu hình cơ sở dữ liệu và hạ tầng dưới dạng mã (Infrastructure as Code - IaC)** trên nền tảng AWS. Mục tiêu là giúp người học nắm bắt cách sử dụng các công cụ như **Terraform** và **Liquibase/Flyway** để tự động hóa việc triển khai cơ sở dữ liệu, đồng bộ môi trường, kiểm soát version của schema, và tích hợp vào pipeline CI/CD.
+
+Thông qua workshop, học viên sẽ hiểu được cách thiết kế hạ tầng linh hoạt, bảo mật, có khả năng mở rộng, đồng thời quản lý thay đổi cấu trúc dữ liệu một cách kiểm soát và minh bạch.
 
 ---
 
-# 1. Problem Statement
+# 1. Vấn đề Đặt ra
 
-## Current Situation
-- Database changes are often executed manually.
-- No version control or rollback mechanism for database schemas.
-- Environment drift occurs between dev, staging, and production.
+## Tình hình Hiện tại
+- Việc thay đổi database vẫn được thực hiện thủ công.
+- Không có quy trình version hóa schema rõ ràng.
+- Dễ xảy ra sai lệch giữa môi trường dev, staging và production.
 
-## Key Challenges
-- Lack of automation and standardization.
-- High operational overhead and risk of human error.
-- Delayed deployment cycles.
+## Thách thức Chính
+- Thiếu công cụ tự động và chuẩn hóa quy trình.
+- Nguy cơ lỗi cao và khó rollback nếu gặp sự cố.
+- Triển khai sản phẩm bị trì hoãn do lỗi cấu hình.
 
-## Stakeholder Impact
-- Developers face inconsistencies across environments.
-- DevOps teams struggle with repeatability and scaling.
-- Business stakeholders experience slower feature releases.
+## Tác động tới Các bên liên quan
+- Dev gặp lỗi do môi trường không đồng bộ.
+- DevOps khó kiểm soát và tái tạo môi trường.
+- Ban điều hành gặp rào cản trong quá trình ra mắt sản phẩm mới.
 
-## Business Consequences
-- Increased downtime and system unreliability.
-- Slower time-to-market.
-- Higher costs in maintenance and incident response.
-
----
-
-# 2. Solution Architecture
-
-## Architecture Overview
-- Terraform provisions cloud infrastructure (VPC, RDS, IAM, S3).
-- Liquibase/Flyway handles schema migrations in CI/CD pipelines.
-- GitOps methodology ensures consistency and auditability.
-
-## AWS Services Used
-- Amazon RDS (MySQL/PostgreSQL)
-- Amazon S3
-- AWS IAM
-- AWS CloudFormation (optional)
-- AWS CloudWatch (monitoring)
-
-## Component Design
-- Modular Terraform setup (network, DB, IAM).
-- CI/CD pipeline executes migrations post-provisioning.
-- Version-controlled configurations stored in Git.
-
-## Security Architecture
-- RDS in private subnets with strict IAM policies.
-- Secrets managed via AWS Secrets Manager.
-- CI/CD access with scoped IAM roles.
-
-## Scalability Design
-- Modules support environment duplication (dev/staging/prod).
-- Multi-AZ RDS for high availability.
-- Reusable components for microservice DB provisioning.
+## Hệ quả Kinh doanh
+- Tăng chi phí bảo trì và khắc phục sự cố.
+- Giảm tốc độ phát triển và đổi mới.
+- Rủi ro downtime cao hơn.
 
 ---
 
-# 3. Technical Implementation
+# 2. Kiến trúc Giải pháp
 
-## Implementation Phases
-1. Environment Setup (AWS, Terraform)
-2. Infrastructure as Code with Terraform Modules
-3. Database Schema Versioning Setup
-4. CI/CD Integration
-5. Environment Deployment and Validation
+## Tổng quan Kiến trúc
+- Sử dụng **Terraform** để tự động hóa việc triển khai hạ tầng AWS (VPC, RDS, IAM…).
+- Dùng **Liquibase hoặc Flyway** để quản lý schema và migration.
+- Triển khai CI/CD tích hợp Git để đảm bảo nhất quán và kiểm soát thay đổi.
 
-## Technical Requirements
-- Terraform v1.3+
+## Dịch vụ AWS Sử dụng
+- **Amazon RDS** – quản lý cơ sở dữ liệu
+- **AWS S3** – lưu trữ file migration
+- **AWS IAM** – phân quyền truy cập
+- **AWS CloudWatch** – giám sát và log
+- (Tùy chọn) **AWS CloudFormation**
+
+## Thiết kế Thành phần
+- Terraform được tổ chức theo module: network, database, IAM.
+- Pipeline CI/CD chứa các bước kiểm tra và thực thi schema migration.
+
+## Kiến trúc Bảo mật
+- Database đặt trong private subnet.
+- Dùng IAM role giới hạn truy cập.
+- Secrets được lưu trữ bằng AWS Secrets Manager.
+
+## Thiết kế Khả năng Mở rộng
+- Hỗ trợ triển khai nhiều môi trường độc lập.
+- RDS Multi-AZ cho độ sẵn sàng cao.
+- Pipeline và module dễ dàng tái sử dụng.
+
+---
+
+# 3. Triển khai Kỹ thuật
+
+## Các Giai đoạn Triển khai
+1. Cấu hình môi trường AWS và công cụ cần thiết.
+2. Viết module Terraform tạo hạ tầng và RDS.
+3. Tích hợp quản lý schema bằng Liquibase/Flyway.
+4. Tạo pipeline CI/CD triển khai môi trường.
+5. Demo chạy thực tế môi trường staging.
+
+## Yêu cầu Kỹ thuật
+- Terraform >= v1.3
 - AWS CLI
-- Liquibase or Flyway
-- GitHub Actions, GitLab CI, or Jenkins
+- Liquibase hoặc Flyway
+- Git, GitHub Actions hoặc GitLab CI
 
-## Development Approach
-- GitOps: Infrastructure and schema changes managed via Git PRs.
-- Incremental delivery: one component at a time.
+## Cách Tiếp cận Phát triển
+- Mô hình GitOps: mọi thay đổi được quản lý qua Git và CI/CD.
+- Từng bước nhỏ, kiểm tra liên tục trước khi đưa vào production.
 
-## Testing Strategy
-- Terraform plan/apply in sandbox first.
-- Validate migration scripts in isolated DB containers.
+## Chiến lược Kiểm thử
+- Kiểm thử `terraform plan` trước khi `apply`.
+- Kiểm thử migration script với database độc lập.
 
-## Deployment Plan
-- Automate provisioning via Terraform.
-- Migrations executed in CI pipeline after provisioning.
-- Manual approval gates for production.
-
----
-
-# 4. Timeline & Milestones
-
-## Project Timeline
-| Phase | Duration | Period |
-|-------|----------|--------|
-| Planning & Setup | 1 week | Week 1 |
-| Terraform Modules | 1 week | Week 2 |
-| CI/CD Integration | 1 week | Week 3 |
-| Environment Deployment | 1 week | Week 4 |
-| Review & Documentation | 1 week | Week 5 |
-
-## Key Milestones
-- Terraform modules created and tested.
-- Database provisioning fully automated.
-- Migration scripts integrated into CI/CD.
-- Successful deployment of demo environments.
-
-## Dependencies
-- Active AWS account.
-- CI/CD runner or GitHub Actions setup.
-- DB migration tool selected and configured.
-
-## Resource Allocation
-- 1 Lead Instructor (DevOps Engineer)
-- 1 Technical Assistant
-- AWS sandbox environment
+## Kế hoạch Triển khai
+- Terraform apply hạ tầng trước.
+- CI chạy migration và kiểm tra schema.
+- Manual approval cho môi trường production.
 
 ---
 
-# 5. Budget Estimation
+# 4. Thời gian & Mốc Triển khai
 
-## Infrastructure Costs
-- AWS RDS: ~$50/month (can use Free Tier)
-- AWS Networking + Storage: ~$10–15/month
+## Lịch trình Dự án
 
-## Development Costs
-- Instructor Preparation: $300–500
-- Content Creation: $200
+| Giai đoạn | Thời gian | Tuần |
+|-----------|-----------|------|
+| Chuẩn bị & Setup ban đầu | 1 tuần | Tuần 1 |
+| Viết module Terraform | 1 tuần | Tuần 2 |
+| Tích hợp Liquibase & CI/CD | 1 tuần | Tuần 3 |
+| Triển khai demo | 1 tuần | Tuần 4 |
+| Đánh giá & hoàn thiện | 1 tuần | Tuần 5 |
 
-## Operational Costs
-- Workshop Hosting Tools: ~$30
-- CI/CD runner: free (GitHub Actions), or self-hosted
+## Mốc Chính
+- Module Terraform hoạt động đúng.
+- Pipeline CI/CD tự động hóa migration.
+- Demo thành công môi trường staging.
 
-## ROI Analysis
-- Reduced deployment time by 50%.
-- Lower risk of schema inconsistency.
-- Reusable modules accelerate future projects.
+## Phụ thuộc
+- Có tài khoản AWS.
+- Có công cụ CI/CD đang hoạt động.
+- Học viên có kiến thức cơ bản về Git và Terraform.
 
----
-
-# 6. Risk Assessment
-
-## Risk Matrix
-
-| Risk | Likelihood | Impact |
-|------|------------|--------|
-| AWS cost overrun | Low | Medium |
-| Learning curve for Terraform | Medium | High |
-| Migration error in production | Low | High |
-
-## Mitigation Strategies
-- Use Free Tier or cost alerts.
-- Provide Terraform quickstart and hands-on labs.
-- Implement backup and rollback strategy.
-
-## Contingency Plans
-- Use local or Docker-based databases for demo.
-- Manual schema application if CI/CD fails.
-- Backup snapshots before running migrations.
+## Phân bổ Nguồn lực
+- 1 Giảng viên chính (DevOps)
+- 1 Trợ giảng hỗ trợ kỹ thuật
+- Môi trường AWS sandbox
 
 ---
 
-# 7. Expected Outcomes
+# 5. Ước lượng Ngân sách
 
-## Success Metrics
-- Provision AWS RDS and environments using Terraform.
-- CI/CD pipeline runs Liquibase/Flyway successfully.
-- Participants complete hands-on labs with minimal issues.
+## Chi phí Hạ tầng
+- RDS: ~50$/tháng (hoặc Free Tier)
+- Networking & S3: ~10–15$/tháng
 
-## Business Benefits
-- Standardized, repeatable infrastructure setup.
-- Lower risk of misconfiguration and data loss.
-- Faster and safer releases.
+## Chi phí Phát triển
+- Chuẩn bị bài giảng: 300–500$
+- Soạn slide & lab thực hành: 200$
 
-## Technical Improvements
-- Modular, version-controlled infrastructure.
-- Database schema managed as code.
-- Enhanced team collaboration and DevOps maturity.
+## Chi phí Vận hành
+- Hosting workshop, tài khoản AWS: ~30$
+- CI/CD runner: Miễn phí với GitHub Actions
 
-## Long-term Value
-- Apply same patterns across services.
-- Reduce onboarding time for new environments.
-- Stronger operational resilience.
+## Phân tích Lợi tức (ROI)
+- Giảm thời gian setup môi trường đến 80%.
+- Tăng tốc độ release phần mềm.
+- Tiết kiệm chi phí vận hành lâu dài.
 
 ---
 
-# Appendices
+# 6. Đánh giá Rủi ro
 
-## A. Technical Specifications
-- Terraform: v1.4+
-- Database: MySQL
-- CI/CD: GitHub Actions
+## Ma trận Rủi ro
 
-## B. Cost Calculations
-- See spreadsheet in `/docs/cost-estimation.xlsx`
+| Rủi ro | Khả năng xảy ra | Mức ảnh hưởng |
+|--------|------------------|----------------|
+| Chi phí AWS vượt kiểm soát | Thấp | Trung bình |
+| Terraform khó học với người mới | Trung bình | Cao |
+| Lỗi migration xóa mất dữ liệu | Thấp | Cao |
 
-## C. Architecture Diagrams
-- Found in `/diagrams/infrastructure.png`
-- CI/CD flow in `/diagrams/pipeline.png`
+## Chiến lược Giảm thiểu
+- Dùng Free Tier và AWS Budget Alerts.
+- Soạn hướng dẫn Terraform cơ bản cho người học.
+- Backup schema trước khi migration.
 
-## D. References
-- [AWS IaC Best Practices](https://docs.aws.amazon.com/whitepapers/latest/infrastructure-as-code/introduction.html)
-- [Terraform AWS Modules](https://registry.terraform.io/namespaces/terraform-aws-modules)
-- [Liquibase vs Flyway Comparison](https://www.baeldung.com/liquibase-flyway)
+## Kế hoạch Dự phòng
+- Dùng database local nếu AWS bị giới hạn.
+- Thực hiện migration thủ công khi cần.
+- Snapshot dữ liệu quan trọng.
 
+---
+
+# 7. Kết quả Kỳ vọng
+
+## Chỉ số Thành công
+- Hạ tầng được provision bằng Terraform.
+- CI/CD chạy migration thành công.
+- Học viên hoàn thành labs trong thời gian quy định.
+
+## Lợi ích Kinh doanh
+- Tăng độ ổn định của hệ thống backend.
+- Giảm rủi ro khi deploy database.
+- Chuẩn hóa môi trường và quy trình DevOps.
+
+## Cải tiến Kỹ thuật
+- Cấu hình DB có thể kiểm soát và lặp lại.
+- Sử dụng IaC chuẩn hóa toàn bộ hệ thống.
+
+## Giá trị Dài hạn
+- Có thể tái sử dụng trong các dự án khác.
+- Giảm thời gian onboard team mới.
+- Tạo nền tảng cho DevOps chuyên sâu.
+
+---
+
+# Phụ lục
+
+## A. Thông số Kỹ thuật
+- Terraform >= v1.3
+- Database: PostgreSQL/MySQL
+- CI/CD: GitHub Actions hoặc GitLab CI
+
+## B. Tính toán Chi phí
+- Chi tiết trong file `/docs/budget.xlsx`
+
+## C. Sơ đồ Kiến trúc
+- Có trong thư mục `/diagrams/infra.png`
+- CI/CD flow: `/diagrams/pipeline.png`
+
+## D. Tài liệu Tham khảo
+- [Hướng dẫn Terraform AWS Modules](https://registry.terraform.io/namespaces/terraform-aws-modules)
+- [So sánh Liquibase & Flyway](https://www.baeldung.com/liquibase-flyway)
+- [Tài liệu chính thức về IaC từ AWS](https://docs.aws.amazon.com/whitepapers/latest/infrastructure-as-code/introduction.html)
