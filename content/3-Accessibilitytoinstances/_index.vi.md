@@ -1,5 +1,5 @@
 ---
-title : "Tạo kết nối đến máy chủ EC2"
+title : "Phát triển hạ tầng IaC cho Database"
 date :  "`r Sys.Date()`" 
 weight : 3 
 chapter : false

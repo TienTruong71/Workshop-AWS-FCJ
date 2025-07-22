@@ -1,5 +1,5 @@
 ---
-title : "Quản lý session logs"
+title : "Quản lý cấu hình Database"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false

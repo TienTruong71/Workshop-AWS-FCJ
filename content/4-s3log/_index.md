@@ -1,5 +1,5 @@
 ---
-title : "Manage session logs"
+title : "Database Configuration Management"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false

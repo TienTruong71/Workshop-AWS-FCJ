@@ -14,7 +14,7 @@ This workshop aims to guide learners on how to deploy and manage database infras
 - Applicability to various database management systems such as MySQL and PostgreSQL.
 - Hands-on practice with CI/CD deployment, compliance checks, and resource cleanup after use.
 
-{{% notice success %}}
+{{% notice note %}}
 Expected outcomes: After the workshop, students should be able to independently design database infrastructure using IaC, effectively manage database configurations, and apply this knowledge in real-world environments (prod/dev/test).
 {{% /notice %}}
 

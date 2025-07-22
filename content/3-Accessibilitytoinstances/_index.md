@@ -1,5 +1,5 @@
 ---
-title : "Connect to EC2 servers"
+title : "Developing IaC Infrastructure for Database"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false

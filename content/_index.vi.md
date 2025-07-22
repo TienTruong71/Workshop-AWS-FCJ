@@ -14,6 +14,10 @@ Workshop này nhằm hướng dẫn người học cách triển khai và quản
 - Áp dụng được cho nhiều loại hệ quản trị cơ sở dữ liệu như MySQL, PostgreSQL.
 - Thực hành triển khai CI/CD, kiểm tra tuân thủ và dọn dẹp tài nguyên sau khi sử dụng.
 
+{{% notice note %}}
+Kết quả mong đợi: Học viên sau workshop có thể tự thiết kế hạ tầng database bằng IaC, quản lý cấu hình database hiệu quả, và áp dụng vào môi trường thực tế (prod/dev/test).
+{{% /notice %}}
+
 ![ConnectPrivate](/images/arc-log.png) 
 
 ### Nội dung

@@ -1,7 +1,7 @@
 ---
-title : "Thử Nghiệm"
+title : "Đảm bảo tuân thủ và kiểm soát thay đổi"
 date :  "`r Sys.Date()`" 
-weight : 7
+weight : 6
 chapter : false
 pre : " <b> 7. </b> "
 ---
