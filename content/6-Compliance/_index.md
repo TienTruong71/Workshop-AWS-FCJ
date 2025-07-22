@@ -1,6 +1,6 @@
 ---
 title : "Compliance & Change Control"
-date : "`r Sys.Date()`"
+date: 2025-07-22
 weight : 6
 chapter : false
 pre : " <b> 6. </b> "

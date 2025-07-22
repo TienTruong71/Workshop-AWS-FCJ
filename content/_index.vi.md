@@ -1,6 +1,6 @@
 ---
 title : "Database Configuration Management & Infrastructure as Code (IaC)"
-date :  "`r Sys.Date()`" 
+date: 2025-07-22
 weight : 1 
 chapter : false
 ---
@@ -27,7 +27,7 @@ Học viên sau khi hoàn tất workshop sẽ:
 + Áp dụng vào hệ thống thực tế với nhiều môi trường (development, staging, production).
 {{% /notice %}}
 
-* Dưới đây là sơ đồ tổng quan về **quản lý cấu hình cơ sở dữ liệu** và **hạ tầng dưới dạng mã (IaC)** sử dụng công cụ **Terraform** để mô hình hóa. Bạn có thể tham khảo
+#### Dưới đây là sơ đồ tổng quan về **quản lý cấu hình cơ sở dữ liệu** và **hạ tầng dưới dạng mã (IaC)** sử dụng công cụ **Terraform** để mô hình hóa. Bạn có thể tham khảo
 ![ConnectPrivate](/images/arc-log.png) 
 
 ### Nội dung

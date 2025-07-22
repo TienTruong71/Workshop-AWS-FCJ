@@ -1,6 +1,6 @@
 ---
 title : "Triển khai tự động & Rollback"
-date :  "`r Sys.Date()`" 
+date: 2025-07-22 
 weight : 5 
 chapter : false
 pre : " <b> 5. </b> "

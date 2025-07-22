@@ -1,6 +1,6 @@
 ---
 title : "Kết nối đến máy chủ Public"
-date :  "`r Sys.Date()`" 
+date: 2025-07-22 
 weight : 1 
 chapter : false
 pre : " <b> 3.1. </b> "

@@ -1,6 +1,6 @@
 ---
 title : "Database Configuration Management & Infrastructure as Code (IaC)"
-date :  "`r Sys.Date()`" 
+date: 2025-07-22 
 weight : 1 
 chapter : false
 ---

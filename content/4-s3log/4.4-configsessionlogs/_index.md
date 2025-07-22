@@ -1,6 +1,6 @@
 ---
 title : "Monitor session logs"
-date : "`r Sys.Date()`"
+date: 2025-07-22
 weight : 4
 chapter : false
 pre : " <b> 4.4 </b> "

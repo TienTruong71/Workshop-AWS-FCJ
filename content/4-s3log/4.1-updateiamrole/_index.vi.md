@@ -1,6 +1,6 @@
 ---
 title : "Cập nhật IAM Role"
-date :  "`r Sys.Date()`" 
+date: 2025-07-22 
 weight : 1 
 chapter : false
 pre : " <b> 4.1 </b> "

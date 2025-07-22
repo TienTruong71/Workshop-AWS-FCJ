@@ -1,6 +1,6 @@
 ---
 title : "Phát triển hạ tầng IaC cho Database"
-date :  "`r Sys.Date()`" 
+date: 2025-07-22 
 weight : 3 
 chapter : false
 pre : " <b> 3. </b> "
