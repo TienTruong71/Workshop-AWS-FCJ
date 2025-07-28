@@ -25,7 +25,7 @@ Học viên sau khi hoàn tất workshop sẽ hiểu được kiến trúc tổn
 
  Dưới đây là sơ đồ tổng quan về **quản lý cấu hình cơ sở dữ liệu** và **hạ tầng dưới dạng mã (IaC)** sử dụng công cụ **Terraform** để mô hình hóa. Bạn có thể tham khảo
  
-![ConnectPrivate](/images/arc-log.png) 
+![ConnectPrivate](/images/aws.drawio.png) 
 
 ### Nội dung
 

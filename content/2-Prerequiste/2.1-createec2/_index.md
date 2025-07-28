@@ -1,5 +1,5 @@
 ---
-title : "Preparing VPC and EC2"
+title : "AWS Infrastructure Setup"
 date: 2025-07-22
 weight : 1
 chapter : false

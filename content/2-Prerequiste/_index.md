@@ -19,5 +19,5 @@ To learn how to create EC2 instances and VPCs with public/private subnets, you c
 Preparing the environment includes many aspects such as building the **network architecture (VPC)**, creating public and private subnets, setting up security groups, and initializing **EC2 (Linux and Windows)** servers to deploy tools and applications. Additionally, essential tools like **Terraform, AWS CLI, Git, Visual Studio Code** must be installed, and **AWS Systems Manager** must be configured to facilitate secure remote access and management of the servers.
 
 ### Content
-  - [Prepare VPC and EC2](2.1-createec2/)
+  - [AWS Infrastructure Setup](2.1-createec2/)
   - [Install Required Tools](2.2-installTools/)

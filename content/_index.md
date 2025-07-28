@@ -23,7 +23,7 @@ This workshop is designed to help learners master the process of deploying, mana
 By the end of this workshop, learners will understand the end-to-end architecture of a database system deployed via IaC. Learn how to develop and reuse IaC templates for different types of databases. Gain practical experience in change control, rollback mechanisms, and CI/CD integration. Be able to apply these practices in real-world environments including development, staging, and production.
 {{% /notice %}}
 
-![ConnectPrivate](/images/arc-log.png) 
+![ConnectPrivate](/images/aws.drawio.png) 
 
 Below is an overview diagram of **database configuration management** and **infrastructure as code (IaC)** using the **Terraform** tool for modeling. You can refer to it.
 

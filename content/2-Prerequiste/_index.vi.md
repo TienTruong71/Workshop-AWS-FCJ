@@ -18,7 +18,7 @@ Trong phần này, chúng ta tiến hành tạo lập các thành phần hạ t�
 Việc chuẩn bị môi trường bao gồm nhiều khía cạnh như xây dựng **kiến trúc mạng (VPC)**, tạo subnet công khai và subnet riêng, thiết lập các nhóm bảo mật, và khởi tạo các máy chủ **EC2 (Linux và Windows)** để triển khai các công cụ và ứng dụng. Ngoài ra, còn phải cài đặt các công cụ thiết yếu như **Terraform, AWS CLI, Git, Visual Studio Code** và cấu hình **AWS Systems Manager** để phục vụ cho việc truy cập và quản trị máy chủ từ xa một cách bảo mật.
 
 ### Nội dung
-  - [Chuẩn bị VPC và EC2 Instance](2.1-createec2/)
+  - [Chuẩn bị hạ tầng AWS](2.1-createec2/)
   - [Cài đặt các công cụ cần thiết](2.2-installTools/)
 
   

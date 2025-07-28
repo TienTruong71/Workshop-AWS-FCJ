@@ -1,5 +1,5 @@
 ---
-title : "Chuẩn bị VPC và EC2"
+title : "Chuẩn bị hạ tầng AWS"
 date: 2025-07-22 
 weight : 1 
 chapter : false
