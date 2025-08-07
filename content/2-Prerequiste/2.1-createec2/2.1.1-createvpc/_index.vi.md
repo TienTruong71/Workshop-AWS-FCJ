@@ -12,11 +12,15 @@ pre : " <b> 2.1.1 </b> "
   + Click **Your VPC**.
   + Click **Create VPC**.
 
-![VPC](/images/2.prerequisite/001-createvpc.png)
+![VPC](/images/imageAWS/vpc1.png)
 
 2. Tại trang **Create VPC**.
-  + Tại mục **Name tag** điền **Lab VPC**.
+  + Tại mục **Name tag** điền **IaC workshop**.
   + Tại mục **IPv4 CIDR** điền : **10.10.0.0/16**.
   + Click **Create VPC**.
 
-![VPC](/images/2.prerequisite/002-createvpc.png)
+![VPC](/images/imageAWS/vpc2.png)
+ 3. Giao diện khởi tạo thành công.
+
+![VPC](/images/imageAWS/vpc3.png)
+

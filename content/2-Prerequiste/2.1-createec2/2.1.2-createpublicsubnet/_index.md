@@ -11,7 +11,7 @@ pre : " <b> 2.1.2 </b> "
 1. Click **Subnets**.
   + Click **Create subnet**.
 
-![VPC](/images/2.prerequisite/003-createsubnet.png)
+![VPC](/images/imageAWS/publicsubnet1.png)
 
 2. At the **Create subnet** page.
   + In the **VPC ID** section, click **Lab VPC**.
@@ -19,7 +19,7 @@ pre : " <b> 2.1.2 </b> "
   + In the **Availability Zone** section, select the first Availability zone.
   + In the field **IPv4 CIRD block** enter **10.10.1.0/24**.
 
-![VPC](/images/2.prerequisite/004-createsubnet.png)
+![VPC](/images/imageAWS/publicsubnet2.png)
 
 3. Scroll to the bottom of the page, click **Create subnet**.
 
@@ -27,41 +27,41 @@ pre : " <b> 2.1.2 </b> "
   + Click **Actions**.
   + Click **Edit subnet settings**.
 
-![VPC](/images/2.prerequisite/005-createsubnet.png)
+![VPC](/images/imageAWS/publicsubnet3.png)
 
 5. Click **Enable auto-assign public IPv4 address**.
   + Click **Save**.
 
-![VPC](/images/2.prerequisite/006-createsubnet.png)
+![VPC](/images/imageAWS/publicsubnet4.png)
 
 6. Click **Internet Gateways**.
   + Click **Create internet gateway**.
   
-![VPC](/images/2.prerequisite/007-createigw.png)
+![VPC](/images/imageAWS/publicsubnet5.png)
 
 7. At the **Create internet gateway** page.
   + In the **Name tag** field, enter **Lab IGW**.
   + Click **Create internet gateway**.
   
-![VPC](/images/2.prerequisite/008-createigw.png)
+![VPC](/images/imageAWS/publicsubnet6.png)
 
 8. After successful creation, click **Actions**.
   + Click **Attach to VPC**.
  
-![VPC](/images/2.prerequisite/009-createigw.png)
+![VPC](/images/imageAWS/publicsubnet7.png)
 
 9. At the **Attach to VPC** page.
   + In the **Available VPCs** section, select **Lab VPC**.
   + Click **Attach internet gateway**.
   + Check the successful attaching process as shown below.
 
-![VPC](/images/2.prerequisite/010-createigw.png)
+![VPC](/images/imageAWS/publicsubnet8.png)
 
 10. Next we will create a custom route table to assign to **Lab Public Subnet**.
   + Click **Route Tables**.
   + Click **Create route table**.
 
-![VPC](/images/2.prerequisite/011-creatertb.png)
+![VPC](/images/imageAWS/publicsubnet9.png)
 
 11. At the **Create route table** page.
   + In the **Name** field, enter **Lab Publicrtb**.
@@ -71,7 +71,7 @@ pre : " <b> 2.1.2 </b> "
 12. After creating the route table successfully.
   + Click **Edit routes**.
   
-![VPC](/images/2.prerequisite/012-creatertb.png)
+![VPC](/images/imageAWS/publicsubnet10.png)
 
 13. At the **Edit routes** page.
   + Click **Add route**.
@@ -79,20 +79,20 @@ pre : " <b> 2.1.2 </b> "
   + In the **Target** section, select **Internet Gateway** and then select **Lab IGW**.
   + Click **Save changes**.
 
-![VPC](/images/2.prerequisite/013-creatertb.png)
+![VPC](/images/imageAWS/publicsubnet11.png)
 
 14. Click the **Subnet associations** tab.
   + Click **Edit subnet associations** to proceed with the associate custom route table we just created in **Lab Public Subnet**.
 
 
-![VPC](/images/2.prerequisite/014-creatertb.png)
+![VPC](/images/imageAWS/publicsubnet12.png)
 
 15. At the **Edit subnet associations** page.
   + Click on **Lab Public Subnet**.
   + Click **Save associations**.
 
-![VPC](/images/2.prerequisite/015-creatertb.png)
+![VPC](/images/imageAWS/publicsubnet13.png)
 
 16. Check that the route table information has been associated with **Lab Public Subnet** and the internet route information has been pointed to the Internet Gateway as shown below.
 
-![VPC](/images/2.prerequisite/016-creatertb.png)
+![VPC](/images/imageAWS/publicsubnet14.png)
