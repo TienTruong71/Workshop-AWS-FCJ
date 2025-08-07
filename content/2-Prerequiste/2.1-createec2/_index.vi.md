@@ -23,3 +23,4 @@ Tổng quan kiến trúc sau khi các bạn hoàn tất bước này sẽ như s
   - [Tạo Private subnet](2.1.3-createprivatesubnet/)
   - [Tạo security group](2.1.4-createsecgroup/)
   - [Tạo máy chủ EC2](2.1.5-createec2linux/)
+  - [Cài đặt những công cụ cần thiết](2.2-installTools/)
