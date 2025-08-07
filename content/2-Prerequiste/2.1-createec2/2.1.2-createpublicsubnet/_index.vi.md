@@ -14,8 +14,8 @@ pre : " <b> 2.1.2 </b> "
 ![VPC](/images/imageAWS/publicsubnet1.png)
 
 2. Tại trang **Create subnet**.
-  + Tại mục **VPC ID** click chọn **Lab VPC**.
-  + Tại mục **Subnet name** điền **Lab Public Subnet**.
+  + Tại mục **VPC ID** click chọn **IaC VPC**.
+  + Tại mục **Subnet name** điền **IaC Public Subnet**.
   + Tại mục **Availability Zone** chọn Availability zone đầu tiên.
   + Tại mục **IPv4 CIRD block** điền **10.10.1.0/24**.
 
@@ -23,7 +23,7 @@ pre : " <b> 2.1.2 </b> "
 
 3. Kéo xuống cuối trang , click **Create subnet**.
 
-4. Click chọn **Lab Public Subnet**.
+4. Click chọn **IaC Public Subnet**.
   + Click **Actions**.
   + Click **Edit subnet settings**.
 
@@ -40,7 +40,7 @@ pre : " <b> 2.1.2 </b> "
 ![VPC](/images/imageAWS/publicsubnet5.png)
 
 7. Tại trang **Create internet gateway**.
-  + Tại mục **Name tag** điền **Lab IGW**.
+  + Tại mục **Name tag** điền **IaC IGW**.
   + Click **Create internet gateway**.
   
 ![VPC](/images/imageAWS/publicsubnet6.png)
@@ -51,20 +51,20 @@ pre : " <b> 2.1.2 </b> "
 ![VPC](/images/imageAWS/publicsubnet7.png)
 
 9. Tại trang **Attach to VPC**.
-  + Tại mục **Available VPCs** chọn **Lab VPC**.
+  + Tại mục **Available VPCs** chọn **IaC VPC**.
   + Click **Attach internet gateway**.
   + Kiểm tra quá trình attach thành công như hình dưới.
 
 ![VPC](/images/imageAWS/publicsubnet8.png)
 
-10. Tiếp theo chúng ta sẽ tạo một custom route table để gán vào **Lab Public Subnet**.
+10. Tiếp theo chúng ta sẽ tạo một custom route table để gán vào **IaC Public Subnet**.
   + Click **Route Tables**.
   + Click **Create route table**.
 
 ![VPC](/images/imageAWS/publicsubnet9.png)
 
 11. Tại trang **Create route table**.
-  + Tại mục **Name**, điền **Lab Publicrtb**.
+  + Tại mục **Name**, điền **IaC Publicrtb**.
   + Tại mục **VPC**, chọn **Lab VPC**.
   + Click **Create route table**.
 
@@ -78,26 +78,26 @@ pre : " <b> 2.1.2 </b> "
 13. Tại trang **Edit routes**.
   + Click **Add route**.
   + Tại mục **Destination** điền 0.0.0.0/0
-  + Tại mục **Target** chọn **Internet Gateway** sau đó chọn **Lab IGW**.
+  + Tại mục **Target** chọn **Internet Gateway** sau đó chọn **IaC IGW**.
   + Click **Save changes**.
 
 ![VPC](/images/imageAWS/publicsubnet12.png)
 
 14. Click tab **Subnet associations**.
-  + Click **Edit subnet associations** để tiến hành associate custom routable chúng ta vừa tạo vào **Lab Public Subnet**.
+  + Click **Edit subnet associations** để tiến hành associate custom routable chúng ta vừa tạo vào **IaC Public Subnet**.
 
 
 ![VPC](/images/imageAWS/publicsubnet13.png)
 
 
 15. Tại trang **Edit subnet associations**. 
-  + Click chọn **Lab Public Subnet**.
+  + Click chọn **IaC Public Subnet**.
   + Click **Save associations**.
 
 ![VPC](/images/imageAWS/publicsubnet14.png)
 
 
-16. Kiểm tra thông tin route table đã được associate với **Lab Public Subnet** và thông tin route đi internet đã được trỏ đến Internet Gateway như hình dưới.
+16. Kiểm tra thông tin route table đã được associate với **IaC Public Subnet** và thông tin route đi internet đã được trỏ đến Internet Gateway như hình dưới.
 
 
 ![VPC](/images/imageAWS/publicsubnet15.png)

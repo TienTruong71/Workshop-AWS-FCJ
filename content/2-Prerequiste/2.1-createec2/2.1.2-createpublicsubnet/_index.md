@@ -16,14 +16,14 @@ pre : " <b> 2.1.2 </b> "
 2. At the **Create subnet** page.
   + In the **VPC ID** section, click **IaC Workshop**.
   + In the **Subnet name** field, enter **IaC Public Subnet**.
-  + In the **Availability Zone** section, select the first Availability zone.
+  + In the **AvailabCility Zone** section, select the first Availability zone.
   + In the field **IPv4 CIRD block** enter **10.10.1.0/24**.
 
 ![VPC](/images/imageAWS/publicsubnet2.png)
 
 3. Scroll to the bottom of the page, click **Create subnet**.
 
-4. Click **Lab Public Subnet**.
+4. Click **IaC Public Subnet**.
   + Click **Actions**.
   + Click **Edit subnet settings**.
 
@@ -51,13 +51,13 @@ pre : " <b> 2.1.2 </b> "
 ![VPC](/images/imageAWS/publicsubnet7.png)
 
 9. At the **Attach to VPC** page.
-  + In the **Available VPCs** section, select **Lab VPC**.
+  + In the **AvaiIaCle VPCs** section, select **IaC VPC**.
   + Click **Attach internet gateway**.
   + Check the successful attaching process as shown below.
 
 ![VPC](/images/imageAWS/publicsubnet8.png)
 
-10. Next we will create a custom route table to assign to **Lab Public Subnet**.
+10. Next we will create a custom route table to assign to **IaC Public Subnet**.
   + Click **Route Tables**.
   + Click **Create route table**.
 
@@ -84,17 +84,17 @@ pre : " <b> 2.1.2 </b> "
 ![VPC](/images/imageAWS/publicsubnet12.png)
 
 14. Click the **Subnet associations** tab.
-  + Click **Edit subnet associations** to proceed with the associate custom route table we just created in **Lab Public Subnet**.
+  + Click **Edit subnet associations** to proceed with the associate custom route table we just created in **IaC Public Subnet**.
 
 
 ![VPC](/images/imageAWS/publicsubnet13.png)
 
 15. At the **Edit subnet associations** page.
-  + Click on **Lab Public Subnet**.
+  + Click on **IaC Public Subnet**.
   + Click **Save associations**.
 
 ![VPC](/images/imageAWS/publicsubnet14.png)
 
-16. Check that the route table information has been associated with **Lab Public Subnet** and the internet route information has been pointed to the Internet Gateway as shown below.
+16. Check that the route table information has been associated with **IaC Public Subnet** and the internet route information has been pointed to the Internet Gateway as shown below.
 
 ![VPC](/images/imageAWS/publicsubnet15.png)
