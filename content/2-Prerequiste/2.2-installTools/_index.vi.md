@@ -10,7 +10,7 @@ pre : " <b> 2.2 </b> "
 
 Trong bước này chúng ta sẽ cài đặt những công cụ cần thiết để tiến hành bài lab 
 
-![Tool](/images/imageAWS/tool.png)
+![Tool](/images/imageAWS/tool.drawio.png)
 
 ## 1. Cài đặt Visual Studio Code (VS Code)
 

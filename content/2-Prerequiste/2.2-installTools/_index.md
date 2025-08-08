@@ -10,7 +10,7 @@ pre : " <b> 2.2 </b> "
 
 In this step, we will install the necessary tools to proceed with the lab.
 
-![Tool](/images/imageAWS/tool.png)
+![Tool](/images/imageAWS/tool.drawio.png)
 
 ## 1. Install Visual Studio Code (VS Code)
 
@@ -56,6 +56,8 @@ Open VS Code → **Extensions** (Ctrl + Shift + X) → install:
 terraform -version
 ```
 If the Terraform version is displayed → installation successful.
+
+---
 
 ## 3. Install AWS CLI
 ### Step 1:  Download AWS CLI
