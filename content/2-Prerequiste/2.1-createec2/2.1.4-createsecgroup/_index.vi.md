@@ -16,13 +16,13 @@ Trong bước này chúng ta sẽ tiến hành tạo các security group đượ
   + Click **Security Group**.  
   + Click **Create security group**.
 
-![SG](/images/2.prerequisite/019-createsg.png)
+![SG](/images/imageAWS/sg1.png)
 
-3. Tại mục **Security group name**, điền **SG Public Linux Instance**. 
-  + Tại mục **Description**, điền **SG Public Linux Instance**.
-  + Tại mục **VPC**, click dấu **X** để chọn lại **Lab VPC** bạn đã tạo cho bài lab này.
+3. Tại mục **Security group name**, điền **SG Public EC2**. 
+  + Tại mục **Description**, điền **SG Public EC2**.
+  + Tại mục **VPC**, click dấu **X** để chọn lại **IaC VPC** bạn đã tạo cho bài lab này.
 
-![SG](/images/2.prerequisite/020-createsg.png)
+![SG](/images/imageAWS/sg2.png)
 
 4. Giữ nguyên **Outbound rule**, kéo chuột xuống phía dưới.
   + Click **Create security group**.
@@ -36,21 +36,21 @@ Các bạn có thể thấy, security group chúng ta tạo sử dụng cho Linu
 
 1. Sau khi tạo thành công security group cho Linux instance nằm trong public subnet, click vào link Security Groups để quay trở lại danh sách Security groups.
 
-![SG](/images/2.prerequisite/021-createsg.png)
+![SG](/images/imageAWS/sg3.png)
 
 2. Click **Create security group**.
 
-3. Tại mục **Security group name**, điền **SG Private Windows Instance**. 
-  + Tại mục **Description**, điền **SG Private Windows Instance**.
+3. Tại mục **Security group name**, điền **SG Private EC2**. 
+  + Tại mục **Description**, điền **SG Private Windows EC2**.
   + Tại mục **VPC**, click dấu **X** để chọn lại **Lab VPC** bạn đã tạo cho bài lab này.
 
-![SG](/images/2.prerequisite/022-createsg.png)
+![SG](/images/imageAWS/sg4.png)
 
 4. Kéo chuột xuống phía dưới.
-  + Thêm **Outbound rule** cho phép kết nối TCP 443 tới 10.10.0.0/16 ( CIDR của **Lab VPC** chúng ta đã tạo)
+  + Thêm **Outbound rule** cho phép kết nối TCP 443 tới 10.10.0.0/16 ( CIDR của **IaC VPC** chúng ta đã tạo)
   + Click **Create security group**.
 
-![SG](/images/2.prerequisite/023-createsg.png)
+![SG](/images/imageAWS/sg5.png)
 
 {{%notice tip%}}
 Đối với Instance trong private subnet, chúng ta sẽ kết nối tới endpoint của **Session Manager** qua kết nối đã được mã hóa TLS. vì thế chúng ta cần cho phép kết nối chiều ra từ instance của mình tới VPC CIDR thông qua port 443.
@@ -66,16 +66,17 @@ Các bạn có thể thấy, security group chúng ta tạo sử dụng cho Linu
   + Tại mục **Description**, điền **SG VPC Endpoint**.
   + Tại mục **VPC**, click dấu **X** để chọn lại **Lab VPC** bạn đã tạo cho bài lab này.
 
-![SG](/images/2.prerequisite/024-createsg.png)
+![SG](/images/imageAWS/sg6.png)
 
 5. Kéo chuột xuống phía dưới.
   + Xóa **Outbound rule**.
   
-![SG](/images/2.prerequisite/025-createsg.png)
+![SG](/images/imageAWS/sg7.png)
 
-6. Thêm **Inbound rule** cho phép TCP 443 đến từ 10.10.0.0/16 ( CIDR của **Lab VPC** chúng ta đã tạo ).
+6. Thêm **Inbound rule** cho phép TCP 443 đến từ 10.10.0.0/16 ( CIDR của **IaC VPC** chúng ta đã tạo ).
   + Click **Create security group**.
 
-![SG](/images/2.prerequisite/026-createsg.png)
+![SG](/images/imageAWS/sg9.png)
+
 
 Như vậy chúng ta đã tiến hành xong việc tạo các security group cần thiết cho các EC2 instance và VPC Endpoint.

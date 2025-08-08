@@ -16,13 +16,13 @@ In this step, we will proceed to create the security groups used for our instanc
   + Click **Security Group**.
   + Click **Create security group**.
 
-![SG](/images/2.prerequisite/019-createsg.png)
+![SG](/images/imageAWS/sg1.png)
 
-3. In the **Security group name** field, enter **SG Public Linux Instance**.
-  + In the **Description** section, enter **SG Public Linux Instance**.
-  + In the **VPC** section, click the **X** to reselect the **Lab VPC** you created for this lab.
+3. In the **Security group name** field, enter **SG Public EC2**.
+  + In the **Description** section, enter **SG Public EC2**.
+  + In the **VPC** section, click the **X** to reselect the **IaC VPC** you created for this lab.
 
-![SG](/images/2.prerequisite/020-createsg.png)
+![SG](/images/imageAWS/sg2.png)
 
 4. Keep **Outbound rule**, drag the mouse to the bottom.
   + Click **Create security group**.
@@ -36,21 +36,21 @@ As you can see, the security group we created to use for Linux public instances 
 
 1. After successfully creating a security group for the Linux instance located in the public subnet, click the Security Groups link to return to the Security groups list.
 
-![SG](/images/2.prerequisite/021-createsg.png)
+![SG](/images/imageAWS/sg3.png)
 
 2. Click **Create security group**.
 
-3. In the **Security group name** field, enter **SG Private Windows Instance**.
-  + In the **Description** section, enter **SG Private Windows Instance**.
-  + In the **VPC** section, click the **X** to reselect the **Lab VPC** you created for this lab.
+3. In the **Security group name** field, enter **SG Private Windows EC2**.
+  + In the **Description** section, enter **SG Private Windows EC2**.
+  + In the **VPC** section, click the **X** to reselect the **IaC VPC** you created for this lab.
 
-![SG](/images/2.prerequisite/022-createsg.png)
+![SG](/images/imageAWS/sg4.png)
 
 4. Scroll down.
-  + Add **Outbound rule** to allow TCP 443 connection to 10.10.0.0/16 ( CIDR of **Lab VPC** we created)
+  + Add **Outbound rule** to allow TCP 443 connection to 10.10.0.0/16 ( CIDR of **IaC VPC** we created)
   + Click **Create security group**.
 
-![SG](/images/2.prerequisite/023-createsg.png)
+![SG](/images/imageAWS/sg5.png)
 
 {{%notice tip%}}
 For the Instance in the private subnet, we will connect to the **Session Manager** endpoint over a TLS encrypted connection, so we need to allow outbound connection from our instance to VPC CIDR through port 443.
@@ -64,18 +64,18 @@ For the Instance in the private subnet, we will connect to the **Session Manager
 3. Click **Create security group**.
 4. In the **Security group name** field, enter **SG VPC Endpoint**.
   + In the **Description** section, enter **SG VPC Endpoint**.
-  + In the **VPC** section, click the **X** to reselect the **Lab VPC** you created for this lab.
+  + In the **VPC** section, click the **X** to reselect the **IaC VPC** you created for this lab.
 
-![SG](/images/2.prerequisite/024-createsg.png)
+![SG](/images/imageAWS/sg6.png)
 
 5. Scroll down.
   + Delete **Outbound rule**.
   
-![SG](/images/2.prerequisite/025-createsg.png)
+![SG](/images/imageAWS/sg7.png)
 
-6. Add **Inbound rule** allowing TCP 443 to come from 10.10.0.0/16 ( CIDR of **Lab VPC** we created ).
+6. Add **Inbound rule** allowing TCP 443 to come from 10.10.0.0/16 ( CIDR of **IaC VPC** we created ).
   + Click **Create security group**.
 
-![SG](/images/2.prerequisite/026-createsg.png)
+![SG](/images/imageAWS/sg9.png)
 
 So we are done creating the necessary security groups for EC2 instances and VPC Endpoints.
