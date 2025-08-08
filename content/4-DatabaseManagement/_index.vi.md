@@ -7,13 +7,19 @@ pre : " <b> 4. </b> "
 ---
 
 
-Với Session Manager chúng ta có thể xem được lịch sử các kết nối tới các instance thông qua **Session history**. Tuy nhiên chúng ta chưa xem được chi tiết các câu lệnh được sử dụng.
+# Phần 4 – Quản lý cấu hình Database
 
-![S3](/images/4.s3/001-s3.png)
+Trong phần này, chúng ta sẽ tập trung vào **việc quản lý và cấu hình cơ sở dữ liệu** đã được triển khai thông qua Infrastructure as Code (IaC).  
+Sau khi hoàn tất việc triển khai hạ tầng và thiết lập kết nối giữa các máy chủ EC2 public và private, bước tiếp theo là cấu hình môi trường cơ sở dữ liệu để đáp ứng yêu cầu của ứng dụng.
 
-Trong phần này chúng ta sẽ tiến hành tạo S3 bucket và thực hiện cấu hình lưu trữ các session logs để xem được chi tiết các câu lệnh được sử dụng trong session.
+Nội dung sẽ bao gồm:
+- Cài đặt và cấu hình phần mềm cơ sở dữ liệu.
+- Áp dụng cấu trúc dữ liệu ban đầu hoặc dữ liệu mẫu.
+- Điều chỉnh các thiết lập bảo mật và hiệu năng.
+- Kiểm tra khả năng kết nối giữa các thành phần ứng dụng và cơ sở dữ liệu.
 
-![port-fwd](/images/arc-log.png) 
+Kết thúc phần này, bạn sẽ có một môi trường cơ sở dữ liệu đã được cấu hình đầy đủ, sẵn sàng cho triển khai trong môi trường giả lập sản xuất.
+
 
 ### Nội dung:
 
