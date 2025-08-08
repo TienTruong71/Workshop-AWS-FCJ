@@ -17,7 +17,7 @@ pre : " <b> 2.1.5 </b> "
 
 ![EC2](/images/imageAWS/ec22.png)
 
-3. Scroll down on the **Instance type** box then choose instance type is **t2.micro** cause this service is free tier eligible
+3. Scroll down on the **Instance type** box then choose instance type is **t2.micro** cause this version is free tier eligible
 
 ![EC2](/images/imageAWS/ec23.png)
 
@@ -28,59 +28,21 @@ pre : " <b> 2.1.5 </b> "
   + In the choose box **Private key file format** choose **.pem**
   + Click **Create key pair** and save it to your computer.
 
-
-
-
-
-
-
-
-
-2. On the **Step 1: Choose an Amazon Machine Image (AMI)** page.
-  + Click **Select** to select AMI **Amazon Linux 2 AMI**.
-  
-![EC2](/images/imageAWS/ec22.png)
-
-3. On the **Step 2: Choose an Instance Type** page.
- + Click on Instance type **t2.micro**.
- + Click **Next: Configure Instance Details**.
+![EC2](/images/imageAWS/ec24.png)
  
-![EC2](/images/2.prerequisite/029-createec2.png)
+ 5. At **Network settings** dialog box
+  + In the **VPC** section, select **IaC Workshop**.
+  + In the **Subnet** section, select **IaC Public Subnet**.
+  + In the **Auto-assign Public Ip** section, select **Enable**
+  + In the **Firewall (security groups)** select existing security group
+  + At the end in the **Common security groups** select **SG public EC2**
+  + Check again one more time and click **Launch Instance** to run EC2 
 
-4. At **Step 3: Configure Instance Details** page
-  + In the **Network** section, select **IaC VPC**.
-  + In the **Subnet** section, select **Lab Public Subnet**.
-  + In the **Auto-assign Public IP** section, select **Use subnet setting (Enable)**
-  + Click **Next: Add Storage**.
+![EC2](/images/imageAWS/ec25.png)
 
-![EC2](/images/2.prerequisite/030-createec2.png)
+6. Successful creation interface
 
-5. Click **Next: Add Tags** to move to the next step.
-  + Click **Next: Configure Security Group** to move to the next step.
+![EC2](/images/imageAWS/ec27.png)
 
-
-6. On page **Step 6: Configure Security Group**.
-  + Select **Select an existing security group**.
-  + Select security group **SG Public Linux Instance**.
-  + Click **Review and Launch**.
-
-![EC2](/images/2.prerequisite/031-createec2.png)
-
-7. The warning dialog box appears because we do not configure the firewall to allow connections to port 22, Click **Continue** to continue.
-
-8. At page **Step 7: Review Instance Launch**.
-  + Click **Launch**.
-
-9.
-
-![EC2](/images/2.prerequisite/032-createec2.png)
-
-10. Click **View Instances** to return to the list of EC2 instances.
-
-11. Click the edit icon under the **Name** column.
-  + In the **Edit Name** dialog box, enter **Public Linux Instance**.
-  + Click **Save**.
-
-![EC2](/images/2.prerequisite/033-createec2.png)
 
 Next, we will do the same to create an EC2 Instance Windows running in the Private subnet.
