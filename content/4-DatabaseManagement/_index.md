@@ -7,20 +7,18 @@ pre : " <b> 4. </b> "
 ---
 
 
-In this section, we will focus on **managing and configuring the database** that we have provisioned using Infrastructure as Code (IaC).  
-After successfully deploying our infrastructure and establishing connectivity between the public and private EC2 instances, the next step is to configure the database environment to meet application requirements.
+In this section, we will focus on **managing and configuring the database** that has been deployed through Infrastructure as Code (IaC).  
+After completing the infrastructure deployment and establishing the connection between public and private EC2 instances, the next step is to configure the database environment to meet the application’s requirements.
 
-We will cover tasks such as:
+This will include:
 - Installing and configuring the database software.
-- Applying initial schema or seed data.
+- Applying the initial database schema or sample data.
 - Adjusting security and performance settings.
-- Verifying connectivity between application components and the database.
+- Testing connectivity between application components and the database.
 
-By the end of this part, you will have a fully configured and operational database environment, ready for deployment in a production-like setting.
+By the end of this section, you will have a fully configured database environment, ready for deployment in a simulated production setting.
 
-### Content:
+### Contents:
 
-   - [Create Private Subnet](./4.1-updateiamrole/)
-   - [Create **S3 Bucket**](./4.2-creates3bucket/)
-   - [Create S3 Gateway endpoint](./4.3-creategwes3)
-   - [Configure **Session logs**](./4.4-configsessionlogs/)
+  - [Create Private Subnet](./4.1-updateiamrole/)
+  - [Store configuration in Parameter Store using Terraform](./4.2-creates3bucket/)

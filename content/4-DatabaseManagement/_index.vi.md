@@ -21,7 +21,5 @@ Kết thúc phần này, bạn sẽ có một môi trường cơ sở dữ liệ
 
 ### Nội dung:
 
-  - [Cập nhật IAM Role](./4.1-updateiamrole/)
-  - [Tạo **S3 Bucket**](./4.2-creates3bucket/)
-  - [Tạo S3 Gateway endpoint](./4.3-creategwes3)
-  - [Cấu hình **Session logs**](./4.4-configsessionlogs/)
+  - [Tạo Private Subnet](./4.1-updateiamrole/)
+  - [Lưu trữ cấu hình trong parameter store bằng terraform](./4.2-creates3bucket/)

@@ -19,4 +19,4 @@ pre : " <b> 4.1 </b> "
 
 ![VPC](/images/imageAWS/41.png)
 
-4. Kéo xuống cuối trang , click **Create subnet**.
+3. Kéo xuống cuối trang , click **Create subnet**.

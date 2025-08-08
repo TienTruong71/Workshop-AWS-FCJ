@@ -6,29 +6,18 @@ chapter : false
 pre : " <b> 4.1 </b> "
 ---
 
-For our EC2 instances to be able to send session logs to the S3 bucket, we will need to update the IAM Role assigned to the EC2 instance by adding a policy that allows access to S3.
+In the previous preparation step, we only had **one Private Subnet**, but when creating an RDS instance, we need two. Therefore, we must create an additional **Private Subnet**.
 
-#### Update IAM Role
+1. On the **VPC** console page:  
+   - Click **Subnets**.  
+   - Click **Create subnet**.  
 
-1. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home?#/home)
-  + Click **Roles**.
-  + In the search box, enter **SSM**.
-  + Click on the **SSM-Role** role.
+2. On the **Create subnet** page:  
+   - In the **VPC ID** field, select **IaC Workshop**.  
+   - In the **Subnet name** field, enter **RDS Private Subnet**.  
+   - In the **Availability Zone** field, select the second Availability Zone.  
+   - In the **IPv4 CIDR block** field, enter **10.10.3.0/24**.  
 
-![S3](/images/4.s3/002-s3.png)
+![VPC](/images/imageAWS/41.png)
 
-2. Click **Attach policies**.
- 
-![S3](/images/4.s3/003-s3.png)
-
-3. In the Search box enter **S3**.
-  + Click the policy **AmazonS3FullAccess**.
-  + Click **Attach policy**.
- 
-![S3](/images/4.s3/004-s3.png)
- 
-{{%notice tip%}}
-In the production environment, we will grant stricter permissions to the specified S3 bucket. In the framework of this lab, we use the policy **AmazonS3FullAccess** for convenience.
-{{%/notice%}}
-
-Next, we will proceed to create an S3 bucket to store session logs.
+3. Scroll to the bottom of the page and click **Create subnet**.

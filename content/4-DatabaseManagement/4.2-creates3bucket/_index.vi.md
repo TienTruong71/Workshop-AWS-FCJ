@@ -158,11 +158,11 @@ terraform plan -var-file="terraform.tfvars
 ```
 ![4](/images/imageAWS/45.png)
 
-{{%notice tip%}}
+{{%notice warning%}}
 Trên giao diện hiển thị bảng thông báo, bạn chỉ cần nhập **"yes"**
 {{% /notice %}}
-- Đợi khoảng 5 phút để khởi tạo
+- Đợi khoảng **5 phút** để khởi tạo
 
 ![4](/images/imageAWS/46.png)
 
-Vậy khép lại phần 4, ta tiếp tục đến phần 5 triển khai tự động và rollback
+Vậy khép lại phần 4, ta tiếp tục đến **phần 5 triển khai tự động và rollback**

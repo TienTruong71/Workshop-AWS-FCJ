@@ -2,7 +2,7 @@
 title : "Developing IaC Infrastructure for Database"
 date: 2025-07-22
 weight : 3
-chapter : true
+chapter : false
 pre : " <b> 3. </b> "
 ---
 

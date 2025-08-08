@@ -6,13 +6,13 @@ chapter : false
 pre : " <b> 3.1. </b> "
 ---
 
-Ở các bước chuẩn bị trước, chúng ta đã tạo hầu hết các dịch vụ của **AWS**, sau đây chúng ta sẽ thực hiện việc nhập và triển khai tất cả bằng những đoạn mã **Terraform**
+In the previous preparation steps, we have created most of the **AWS** services. Now, we will proceed to import and deploy all of them using **Terraform** code snippets.
 
-## Mở giao diện **Visual studio**
+## Open the **Visual Studio** interface
 
 ![3](/images/imageAWS/iac1.png)
 
-  - Nhập đoạn **source** mẫu tạo nền móng để khởi tạo **Terraform**
+- Enter the sample **source** code to lay the foundation for initializing **Terraform**  
 ```
 resource "aws_vpc" "main" {}
 
@@ -20,36 +20,39 @@ provider "aws" {
 region = "us-east-1"
 }
 ```
-  - Sau đó khởi tạo **Terraform** trong giao diện **CMD**
+
+- Then initialize **Terraform** in the **CMD** interface  
 ```
 terraform init
 ```
-  - Giao diện khởi tạo thành công như hình mẫu bên dưới
+
+- The successful initialization interface will look like the example below  
 
 ![3](/images/imageAWS/iac2.png)
 
-## Tiến hành Import các dịch vụ đã khởi tạo thủ công 
+## Proceed to import the manually created services  
 
-  - Ở giao diện **CMD** nhập 
-  ```bash
-  terraform import aws_vpc.main vpc-xxx
-  ```
+- In the **CMD** interface, enter:  
+```bash
+terraform import aws_vpc.main vpc-xxx
+```
 
-{{% notice note %}}
-  **xxx** là id của những dịch vụ đã khởi tạo, ví dụ dịch vụ của mình ở đây là vpc-00cbeef2469c6bbb
+{{% notice note %}}  
+**xxx** is the ID of the service you created, for example, my service here is vpc-00cbeef2469c6bbb  
 {{% /notice %}}
 
 ![3](/images/imageAWS/iac3.png)
 
- - Để đồng bộ, chúng ta cần nhập **source** trùng khớp với những thông tin đã **import**. Cùng trên giao diện **CMD** nhập:
- ```bash
+- To synchronize, we need to enter the **source** that matches the imported information. In the **CMD** interface, enter:  
+```bash
 terraform show
- ``` 
-  - Ngay lập tức giao diện xuất hiện thông tin những dịch vụ đã khởi tạo  
+```  
+
+- Immediately, the interface will display information about the created services  
 
 ![3](/images/imageAWS/iac4.png)
 
-  - Chúng ta sẽ chọn lọc những hạng mục của dịch vụ quan trọng và cần thiết để viết vào **Source**, cụ thể như:
+- We will filter out the important and necessary service attributes to write into the **source**, for example:  
 
 ```
 resource "aws_vpc" "main" {
@@ -64,16 +67,17 @@ Name = "IaC workshop "
 }
 }
 ```
-  - Viết **Source** vào giao diện code trong visual 
+
+- Write the **source** into the code editor in Visual Studio  
 
 ![3](/images/imageAWS/iac5.png)
 
-{{% notice tip %}}
-  Vậy là chúng ta đã **import** thành công dịch vụ VPC, tương tự ta sẽ **Import** với những dịch vụ còn lại khác.
+{{% notice tip %}}  
+So we have successfully **imported** the VPC service. Similarly, we will **import** the remaining services.  
 {{% /notice %}}
 
-  - Tương tự **Import** lần lượt những dịch vụ sau y như cách lúc nãy ta đã làm  
- 
+- Similarly, **import** the following services one by one, exactly as we did earlier:  
+
 ```bash
 terraform import aws_subnet.private subnet-xxx
 
@@ -88,7 +92,7 @@ terraform import aws_security_group.db_sg sg-xxx
 terraform import aws_instance.i i-xxx
 ```
 
-  - sau khi đã **Import** hoàn tất, ta được đoạn **Source** kết quả sau:
+- After completing all **imports**, we will have the following resulting **source**:  
 
 ```
 resource "aws_vpc" "main" {
@@ -223,14 +227,14 @@ tags = {
 Name = "IaC EC2"
 }
 }
+
 provider "aws" {
 region = "us-east-1"
-
 }
 ```
-  - Ở bước cuối cùng, ta sẽ tiến hành kiểm tra **plan** để xem rằng có sự **thay đổi không chủ đích** nào xảy ra không. Nếu thông báo hiện **No changes...** hoặc tương tự như ảnh bên dưới là đã thành công.
-  
+
+- In the final step, we will run the **plan** command to check if there are any **unintended changes**. If the message shows **No changes...** or something similar to the image below, it means the process is successful.  
+
 ![3](/images/imageAWS/iac6.png)
 
-
-#### Kết thúc phần 3, tiếp theo ta sẽ tiến hành đến phần 4 quản lý cấu hình **Database**
+#### End of part 3. Next, we will proceed to part 4: **Database** configuration management.
