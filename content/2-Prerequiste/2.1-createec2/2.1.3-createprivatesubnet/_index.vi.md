@@ -11,7 +11,7 @@ pre : " <b> 2.1.3 </b> "
 1. Click **Subnets**.
   + Click **Create subnet**.
 
-![VPC](/images/2.prerequisite/017-createsubnet.png)
+![VPC](/images/imageAWS/privatesubnet1.png)
 
 2. Tại trang **Create subnet**.
   + Tại mục **VPC ID** click chọn **IaC VPC**.
@@ -19,7 +19,7 @@ pre : " <b> 2.1.3 </b> "
   + Tại mục **Availability Zone** chọn Availability zone đầu tiên.
   + Tại mục **IPv4 CIRD block** điền **10.10.2.0/24**.
 
-![VPC](/images/2.prerequisite/018-createsubnet.png)
+![VPC](/images/imageAWS/privatesubnet2.png)
 3. Giao diện khởi tạo thành công
 
 ![VPC](/images/imageAWS/privatesubnet3.png)
