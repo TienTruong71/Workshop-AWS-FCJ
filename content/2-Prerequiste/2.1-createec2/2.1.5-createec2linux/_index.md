@@ -10,12 +10,36 @@ pre : " <b> 2.1.5 </b> "
   + Click **Instances**.
   + Click **Launch instances**.
   
-![EC2](/images/2.prerequisite/027-createec2.png)
+![EC2](/images/imageAWS/ec21.png)
+
+2. Click the edit icon under the **Name** column
+  + In the **Edit Name** dialog box, enter **IaC Ec2**
+
+![EC2](/images/imageAWS/ec22.png)
+
+3. Scroll down on the **Instance type** box then choose instance type is **t2.micro** cause this service is free tier eligible
+
+![EC2](/images/imageAWS/ec23.png)
+
+4. In the **Select an existing key pair or create a new key pair** dialog box.
+  + Click to select **Create a new key pair**.
+  + In the **Key pair name** field, enter **IaC**.
+  + In the **Key pair type** click type **RSA**
+  + In the choose box **Private key file format** choose **.pem**
+  + Click **Create key pair** and save it to your computer.
+
+
+
+
+
+
+
+
 
 2. On the **Step 1: Choose an Amazon Machine Image (AMI)** page.
   + Click **Select** to select AMI **Amazon Linux 2 AMI**.
   
-![EC2](/images/2.prerequisite/028-createec2.png)
+![EC2](/images/imageAWS/ec22.png)
 
 3. On the **Step 2: Choose an Instance Type** page.
  + Click on Instance type **t2.micro**.
@@ -24,7 +48,7 @@ pre : " <b> 2.1.5 </b> "
 ![EC2](/images/2.prerequisite/029-createec2.png)
 
 4. At **Step 3: Configure Instance Details** page
-  + In the **Network** section, select **Lab VPC**.
+  + In the **Network** section, select **IaC VPC**.
   + In the **Subnet** section, select **Lab Public Subnet**.
   + In the **Auto-assign Public IP** section, select **Use subnet setting (Enable)**
   + Click **Next: Add Storage**.
@@ -47,11 +71,7 @@ pre : " <b> 2.1.5 </b> "
 8. At page **Step 7: Review Instance Launch**.
   + Click **Launch**.
 
-9. In the **Select an existing key pair or create a new key pair** dialog box.
-  + Click to select **Create a new key pair**.
-  + In the **Key pair name** field, enter **LabKeypair**.
-  + Click **Download Key Pair** and save it to your computer.
-  + Click **Launch Instances** to create EC2 server.
+9.
 
 ![EC2](/images/2.prerequisite/032-createec2.png)
 
