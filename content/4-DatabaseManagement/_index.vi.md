@@ -7,8 +7,6 @@ pre : " <b> 4. </b> "
 ---
 
 
-# Phần 4 – Quản lý cấu hình Database
-
 Trong phần này, chúng ta sẽ tập trung vào **việc quản lý và cấu hình cơ sở dữ liệu** đã được triển khai thông qua Infrastructure as Code (IaC).  
 Sau khi hoàn tất việc triển khai hạ tầng và thiết lập kết nối giữa các máy chủ EC2 public và private, bước tiếp theo là cấu hình môi trường cơ sở dữ liệu để đáp ứng yêu cầu của ứng dụng.
 
