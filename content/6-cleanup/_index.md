@@ -1,9 +1,9 @@
 +++
 title = "Clean up resources"
 date = 2022
-weight = 7
+weight = 6
 chapter = false
-pre = "<b>7. </b>"
+pre = "<b>6. </b>"
 +++
 
 We will take the following steps to delete the resources we created in this exercise.

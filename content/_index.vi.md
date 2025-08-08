@@ -31,8 +31,7 @@ Học viên sau khi hoàn tất workshop sẽ hiểu được kiến trúc tổn
 
  1. [Giới thiệu](1-introduce/)
  2. [Các bước chuẩn bị](2-Prerequiste/)
- 3. [Phát triển hạ tầng IaC cho Database](3-Accessibilitytoinstance/)
- 4. [Quản lý cấu hình Database](4-s3log/)
- 5. [Triển khai tự động và Rollback](5-Portfwd/)
- 6. [Đảm bảo tuân thủ & kiểm soát thay đổi](6-Compliance/)
- 7. [Dọn dẹp tài nguyên](7-Cleanup/)
+ 3. [Phát triển hạ tầng IaC cho Database](3-DevIaC/)
+ 4. [Quản lý cấu hình Database](4-DatabaseManagement/)
+ 5. [Triển khai tự động và Rollback](5-AutomatedRollback/)
+ 6. [Dọn dẹp tài nguyên](6-Cleanup/)

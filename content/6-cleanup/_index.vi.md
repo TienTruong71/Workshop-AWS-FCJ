@@ -1,9 +1,9 @@
 +++
 title = "Dọn dẹp tài nguyên  "
 date = 2021
-weight = 7
+weight = 6
 chapter = false
-pre = "<b>7. </b>"
+pre = "<b>6. </b>"
 +++
 
 Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.

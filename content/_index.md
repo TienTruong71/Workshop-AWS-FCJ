@@ -31,8 +31,7 @@ Below is an overview diagram of **database configuration management** and **infr
 
  1. [Introduction](1-introduce/)
  2. [Preparation](2-Prerequiste/)
- 3. [Developing IaC Infractructure for Databases](3-Accessibilitytoinstance/)
- 4. [Database Configuration Management](4-s3log/)
- 5. [Automated Deployment and Rollback](5-Portfwd/)
- 6. [Compliance & Change Control](6-Compliance/)
- 7. [Clean up resource](7-Cleanup/)
+ 3. [Developing IaC Infractructure for Databases](3-DevIaC/)
+ 4. [Database Configuration Management](4-DatabaseManagement/)
+ 5. [Automated Deployment and Rollback](5-AutomatedRollback/)
+ 6. [Clean up resource](6-Cleanup/)
