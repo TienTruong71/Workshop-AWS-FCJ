@@ -29,7 +29,7 @@ pre : " <b> 5.2 </b> "
      - Chọn **Add .gitignore** để bỏ qua file/thư mục không cần push.
      - Chọn **Choose a license** nếu muốn thêm giấy phép sử dụng.
 
-![5](/images/imageAWWS/51.png)
+![5](/images/imageAWS/51.png)
 
 ---
 
@@ -43,7 +43,7 @@ pre : " <b> 5.2 </b> "
 #### Tạo cấu trúc thư mục trong **visual studio**
 - Tạo file `ci-cd.yml` nằm trong folder **.github\workflows**, tương tự như ảnh bên dưới
 
-![5](/images/imageAWWS/511.png)
+![5](/images/imageAWS/511.png)
 
 #### Nội dung file **ci-cd.yml**
 
@@ -144,11 +144,11 @@ git branch -M main
 git remote add origin https://github.com/TienTruong71/terraform-CICD-Workshop.git
 git push -u origin main 
 ```
-![5](/images/imageAWWS/512.png)
-![5](/images/imageAWWS/513.png)
+![5](/images/imageAWS/512.png)
+![5](/images/imageAWS/513.png)
 
 {{%notice tip%}}
 Sau khi giao diện thông báo **CMD** như ảnh dưới đây là chúng ta đã thực hiện thành công!!
 {{% /notice %}}
 
-![5](/images/imageAWWS/514.png)
+![5](/images/imageAWS/514.png)

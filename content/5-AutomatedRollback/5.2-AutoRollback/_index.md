@@ -29,7 +29,7 @@ pre : " <b> 5.2 </b> "
      - Select **Add .gitignore** to exclude unnecessary files/folders from pushing.
      - Select **Choose a license** if you want to add a usage license.
 
-![5](/images/imageAWWS/51.png)
+![5](/images/imageAWS/51.png)
 
 ---
 
@@ -44,7 +44,7 @@ pre : " <b> 5.2 </b> "
 #### Create folder structure in **Visual Studio**
 - Create a file named `ci-cd.yml` inside the **.github\workflows** folder, similar to the image below.
 
-![5](/images/imageAWWS/511.png)
+![5](/images/imageAWS/511.png)
 
 #### Content of **ci-cd.yml**
 
@@ -104,6 +104,10 @@ jobs:
             --subject "RDS Deployment"
 
   rollback:
+
+
+
+  =========================    
     name: Rollback from last snapshot
     runs-on: ubuntu-latest
     needs: deploy
@@ -146,11 +150,11 @@ git remote add origin https://github.com/TienTruong71/terraform-CICD-Workshop.gi
 git push -u origin main
 ```
 
-![5](/images/imageAWWS/512.png)  
-![5](/images/imageAWWS/513.png)  
+![5](/images/imageAWS/512.png)  
+![5](/images/imageAWS/513.png)  
 
 {{%notice tip%}}
 Once the **CMD** interface displays the notification like the image below, we have successfully completed the process!!
 {{% /notice %}}
 
-![5](/images/imageAWWS/514.png)
+![5](/images/imageAWS/514.png)
